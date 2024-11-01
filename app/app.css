@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.action-button {
+  @apply bg-purple-600 text-white font-medium py-4 rounded-lg text-lg;
+}
+
+.card {
+  @apply bg-white rounded-xl p-4 m-2 shadow;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-purple-800 mb-2;
+}
+
+.mood-button {
+  @apply p-4 rounded-full m-1;
+}
+
+.meditation-card {
+  @apply flex flex-col p-4 bg-purple-50 rounded-xl m-2;
+}

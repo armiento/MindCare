@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7c3aed;
+  --primary-light: #8b5cf6;
+}
+
+@layer base {
+  body {
+    @apply bg-purple-50 text-gray-800;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl;
+  }
+
+  .btn-primary {
+    @apply bg-purple-600 text-white px-6 py-3 rounded-lg 
+           hover:bg-purple-700 transition-all duration-300
+           transform hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50;
+  }
+
+  .mood-button {
+    @apply text-4xl p-4 rounded-full transition-all duration-300
+           hover:scale-110 hover:bg-purple-100
+           focus:outline-none focus:ring-2 focus:ring-purple-500;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}

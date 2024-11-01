@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-purple-100">
+    <ActionBar title="MindCare" class="bg-purple-600 text-white" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <!-- Sección de Seguimiento del Estado de Ánimo -->
+            <Label text="¿Cómo te sientes hoy?" class="section-title" />
+            <GridLayout columns="*, *, *, *, *" class="mb-4">
+                <Button col="0" text="😢" tap="{{ logMood }}" class="mood-button" param="1" />
+                <Button col="1" text="😕" tap="{{ logMood }}" class="mood-button" param="2" />
+                <Button col="2" text="😐" tap="{{ logMood }}" class="mood-button" param="3" />
+                <Button col="3" text="🙂" tap="{{ logMood }}" class="mood-button" param="4" />
+                <Button col="4" text="😊" tap="{{ logMood }}" class="mood-button" param="5" />
+            </GridLayout>
+
+            <!-- Acciones Rápidas -->
+            <Label text="Acciones Rápidas" class="section-title" />
+            <Button text="Iniciar Ejercicio de Respiración" tap="{{ startBreathingExercise }}" class="action-button mb-2" />
+            
+            <!-- Sección de Meditación -->
+            <Label text="Meditaciones Guiadas" class="section-title" />
+            <StackLayout class="meditation-card">
+                <Label text="Alivio del Estrés" class="text-lg font-medium text-purple-700" />
+                <Label text="10 minutos" class="text-sm text-gray-600" />
+                <Button text="Iniciar Sesión" tap="{{ startMeditation }}" param="stress-relief" class="action-button mt-2" />
+            </StackLayout>
+
+            <StackLayout class="meditation-card">
+                <Label text="Mejor Descanso" class="text-lg font-medium text-purple-700" />
+                <Label text="15 minutos" class="text-sm text-gray-600" />
+                <Button text="Iniciar Sesión" tap="{{ startMeditation }}" param="better-sleep" class="action-button mt-2" />
+            </StackLayout>
+
+            <StackLayout class="meditation-card">
+                <Label text="Concentración y Enfoque" class="text-lg font-medium text-purple-700" />
+                <Label text="8 minutos" class="text-sm text-gray-600" />
+                <Button text="Iniciar Sesión" tap="{{ startMeditation }}" param="focus" class="action-button mt-2" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</Page>
